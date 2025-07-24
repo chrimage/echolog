@@ -1,0 +1,45 @@
+{
+  "name": "echolog",
+  "version": "1.0.0",
+  "description": "High-fidelity multitrack Discord voice recording bot with precise synchronization",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "mix": "ts-node src/scripts/mix.ts",
+    "clean": "rm -rf dist",
+    "lint": "eslint src --ext .ts",
+    "test": "jest"
+  },
+  "keywords": [
+    "discord",
+    "voice",
+    "recording",
+    "multitrack",
+    "audio",
+    "synchronization"
+  ],
+  "author": "EchoLog Team",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "@discordjs/voice": "latest",
+    "opusscript": "^0.1.1",
+    "sodium-native": "^4.2.0",
+    "ffmpeg-static": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

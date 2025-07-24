@@ -1,0 +1,63 @@
+{
+  "bot": {
+    "name": "EchoLog Recording Bot",
+    "version": "1.0.0",
+    "description": "High-fidelity Discord voice recording with precise synchronization"
+  },
+  "audio": {
+    "sampleRate": 48000,
+    "channels": 2,
+    "frameDuration": 20,
+    "codec": "opus",
+    "outputFormat": "pcm"
+  },
+  "recording": {
+    "maxDuration": 3600000,
+    "jitterBuffer": {
+      "targetDelay": 150,
+      "maxJitter": 60,
+      "flushInterval": 20
+    },
+    "driftCorrection": {
+      "enabled": true,
+      "threshold": 10,
+      "analysisInterval": 30000
+    }
+  },
+  "mixing": {
+    "defaultFormat": "wav",
+    "quality": "high",
+    "normalize": false,
+    "noiseReduction": false,
+    "outputDirectory": "./recordings"
+  },
+  "monitoring": {
+    "logLevel": "info",
+    "enableMetrics": true,
+    "healthCheck": {
+      "enabled": true,
+      "interval": 300000
+    }
+  },
+  "security": {
+    "rateLimiting": {
+      "enabled": true,
+      "maxCommandsPerMinute": 10
+    },
+    "allowedGuilds": [],
+    "allowedUsers": [],
+    "maxSessionsPerGuild": 1
+  },
+  "maintenance": {
+    "autoCleanup": {
+      "enabled": false,
+      "maxAge": 604800000,
+      "checkInterval": 86400000
+    },
+    "backup": {
+      "enabled": false,
+      "directory": "./backups",
+      "retention": 30
+    }
+  }
+}

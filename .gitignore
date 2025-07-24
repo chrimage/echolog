@@ -1,0 +1,11 @@
+.ai-docs/
+node_modules
+dist/
+.env
+recordings/*.pcm
+recordings/*.json
+recordings/*.wav
+recordings/*.ogg
+*.log
+.DS_Store
+.vscode/
